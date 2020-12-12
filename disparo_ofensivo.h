@@ -5,16 +5,18 @@
 
 #include<math.h>
 #include<iostream>
-#include<Estructura_Disparo.h>
 
 using namespace::std;
 
-class Disparo_Ofensivo : public Disp_ofensive, public Disp_defensive
+class Disparo_Ofensivo
 {
 
+
 public:
-    void Imprimir(float angle,float V0of,float x,float y, int t);
-    void Disparo_of(Disp_ofensive disparoO, Disp_defensive disparoD, int Voo);
+    float dis = 800;
+    float Yo= 200;
+    float Xi= 0;
+    float DesO = 0.05*dis;
     Disparo_Ofensivo();
 };
 

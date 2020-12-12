@@ -4,9 +4,11 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        disparo_defensivo.cpp \
         disparo_ofensivo.cpp \
         main.cpp
 
 HEADERS += \
-    Estructura_Disparo.h \
+    Funciones.h \
+    disparo_defensivo.h \
     disparo_ofensivo.h
