@@ -8,7 +8,7 @@ class disparo_defensivo
 
 public:
     float dis = 800;
-    float Yo;
+    float Yo = 200;
     float Xi= 800;
     float DesDef = 0.025*dis;
     disparo_defensivo();

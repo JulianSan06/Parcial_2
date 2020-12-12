@@ -1,6 +1,6 @@
 #ifndef FUNCIONES_H
 #define FUNCIONES_H
-#define G 9.81
+#define G 9.8
 #define pi 3.1416
 
 #include<math.h>
