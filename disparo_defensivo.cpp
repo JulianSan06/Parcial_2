@@ -4,8 +4,3 @@ disparo_defensivo::disparo_defensivo()
 {
 
 }
-
-disparo_defensivo::~disparo_defensivo()
-{
-
-}

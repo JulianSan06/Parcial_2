@@ -13,10 +13,11 @@ class Disparo_Ofensivo
 
 
 public:
-    float dis = 800;
-    float Yo= 200;
-    float Xi= 0;
-    float DesO = 0.05*dis;
+    float distance=800;
+    float Ho=200;
+    float Xo=0;
+    float Yo=Ho;
+    float DO=0.05*distance;
     Disparo_Ofensivo();
 };
 

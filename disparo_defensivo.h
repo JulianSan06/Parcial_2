@@ -7,10 +7,11 @@ class disparo_defensivo
 
 
 public:
-    float dis = 800;
-    float Yo = 200;
-    float Xi= 800;
-    float DesDef = 0.025*dis;
+    float distance=800;
+    float Hd=50;
+    float Xd=distance;
+    float Yd=Hd;
+    float DO=0.025*distance;
     disparo_defensivo();
 };
 
