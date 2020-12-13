@@ -198,67 +198,8 @@ void Disparodef3(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo,
         cout << "No impacto en los disparos esperados"<< endl;
     }
 }
+
+
+
+
 #endif // FUNCIONES_H
-
-
-void neutralizacion(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int VoO, int angleO){
-    int VoD, t, t2, angleD, X_def, Y_def, X_of, Y_of;
-    int distancia= 0;
-    bool flag3;
-    for(t = 0; ;t++){
-        X_of = disparoO.Xo + VoO*cos((angleO + 90) * pi/180)*t;
-        Y_of = disparoO.Yo + VoO* sin((angleO+90) * pi /180)*t - (0.5*G*t*t);
-        for(VoD = 0; ;VoD +=5){
-            for(angleD = 0; angleD<90; angleD++){
-                for(t2 = 2; ; t2++){
-                    X_def = disparoD.Xd + VoD*cos(angleD * pi/180)*t2;
-                    Y_def = disparoD.Hd + VoO* sin(angleD * pi /180)*t2 - (0.5*G*t2*t2);
-                    distancia = sqrt(pow((X_of - X_def),2)+pow((Y_of - Y_def),2));
-                    if(distancia < disparoD.DO){
-                        flag3 = 1;
-                        break;
-                    }
-                }
-                if(flag3)
-                    break;
-            }
-            if(flag3)
-                break;
-        }
-        if(flag3)
-            break;
-    }
-
-    for(int j = 0; j >3;){
-        float Vo_Res, Angle_Res, X_Res, Y_Res;
-        int t_Res;
-        bool flag4 = 0;
-        for(Vo_Res = VoO; ; Vo_Res+= 10){
-            for(Angle_Res = 0; Angle_Res <90; Angle_Res++){
-                for (t_Res = 2; ; t_Res++){
-                    X_Res = disparoO.Xo + VoO*cos((Angle_Res+ 90) * pi/180)*t_Res;
-                    Y_Res = disparoO.Yo + VoO* sin((Angle_Res+90) * pi /180)*t_Res - (0.5*G*t_Res*t_Res);
-                    if(t_Res < t){
-                        if(sqrt(pow((X_of - X_def),2)+pow((Y_of - Y_def),2)) < disparoD.DO){
-                            flag4 = 1;
-                            break;
-                        }
-                        else{
-                            flag4 = 0;
-                            break;
-                        }
-                    }
-                    if(flag4)
-                        break;
-                }
-                if(flag4)
-                    break;
-
-            }
-            if(flag4)
-                break;
-        }
-        Imprimir(Angle_Res, Vo_Res, X_Res, Y_Res,t_Res);
-        j++;
-    }
-}

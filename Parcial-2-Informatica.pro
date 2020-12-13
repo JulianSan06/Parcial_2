@@ -11,4 +11,5 @@ SOURCES += \
 HEADERS += \
     Funciones.h \
     disparo_defensivo.h \
-    disparo_ofensivo.h
+    disparo_ofensivo.h \
+    neutralizacion.h

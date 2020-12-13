@@ -2,6 +2,7 @@
 #include<disparo_defensivo.h>
 #include<disparo_ofensivo.h>
 #include<Funciones.h>
+#include<neutralizacion.h>
 
 using namespace std;
 
