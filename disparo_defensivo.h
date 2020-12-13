@@ -8,7 +8,7 @@ class disparo_defensivo
 
 public:
     float distance=800;
-    float Hd=50;
+    float Hd=200;
     float Xd=distance;
     float Yd=Hd;
     float DO=0.025*distance;

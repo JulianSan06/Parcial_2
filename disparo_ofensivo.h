@@ -14,7 +14,7 @@ class Disparo_Ofensivo
 
 public:
     float distance=800;
-    float Ho=200;
+    float Ho=50;
     float Xo=0;
     float Yo=Ho;
     float DO=0.05*distance;

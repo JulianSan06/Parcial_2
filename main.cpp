@@ -113,7 +113,7 @@ int main()
             cin >> angleO;
 
 
-            neutralizacion(disparo1, disparo2, VoO, angleO);
+            neutralizacion(disparo1, disparo2, angleO,  VoO);
 
         }
 
