@@ -18,7 +18,7 @@ void Imprimir(float angle,float V0of,float x,float y, int t){
     cout << endl;
 }
 
-void Disparo_of(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo){
+void Disparo_of(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo, int dis){
     float Vxo, Vyo, x, y;
     int V0of=0;
     int t=0;
@@ -44,16 +44,16 @@ void Disparo_of(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo){
                     break;
                 }
             }
-            if(flag == 3) break;
+            if(flag == dis) break;
         }
-        if(flag==3) break;
+        if(flag==dis) break;
     }
-    if(flag!=3){
+    if(flag!=dis){
         cout << "No impacto en los disparos esperados" << endl;
     }
 }
 
-void Disparo_def(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo){
+void Disparo_def(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo, int num1){
     float Vxo, Vyo, x, y;
     int V0of=0;
     int t=0;
@@ -61,8 +61,8 @@ void Disparo_def(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo)
     int flag=0;
     for(V0of=Voo; ;V0of+=5){
         for(angle=0;angle<90;angle++){
-            Vxo=V0of*cos((angle+90)*pi/180);
-            Vyo=abs(V0of*sin((angle+90)*pi/180));
+            Vxo=V0of*cos((angle)*pi/180);
+            Vyo=abs(V0of*sin((angle)*pi/180));
             x=0.0;
             y=0.0;
             for(t=0; ;t++){
@@ -79,11 +79,11 @@ void Disparo_def(Disparo_Ofensivo disparoO, disparo_defensivo disparoD, int Voo)
                     break;
                 }
             }
-            if(flag == 3) break;
+            if(flag == num1) break;
         }
-        if(flag==3) break;
+        if(flag==num1) break;
     }
-    if(flag!=3){
+    if(flag!=num1){
         cout << "No impacto en los disparos esperados" << endl;
     }
 }

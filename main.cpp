@@ -30,7 +30,12 @@ int main()
             cout << "Ingrese la velocidad de prueba: " << endl;
             float Velocidad_ofensiva;
             cin >> Velocidad_ofensiva;
-            Disparo_of(disparo2, disparo1, Velocidad_ofensiva);
+
+            int num;
+            cout << "ingrese los disparos que realizara" << endl;
+            cin >> num;
+
+            Disparo_of(disparo2, disparo1, Velocidad_ofensiva, num);
             disparo2.~Disparo_Ofensivo();
             disparo1.~disparo_defensivo();
 
@@ -46,7 +51,12 @@ int main()
             cout << "Ingrese la velocidad de prueba: " << endl;
             float Velocidad_ofensiva;
             cin >> Velocidad_ofensiva;
-            Disparo_def(disparo2, disparo1, Velocidad_ofensiva);
+
+            int num1;
+            cout << "ingrese los disparos que realizara" << endl;
+            cin >> num1;
+
+            Disparo_def(disparo2, disparo1, Velocidad_ofensiva, num1);
             disparo2.~Disparo_Ofensivo();
             disparo1.~disparo_defensivo();
 
@@ -102,18 +112,14 @@ int main()
 
             Disparo_Ofensivo disparo1; //primer disparo ofensivo
             disparo_defensivo disparo2; //segundo disparo ofensivo;
-            int VoO, angleO;
 
             cout << "----------------------------------------\n\n" << endl;
             cout << "GENERAR DISPAROS DE DEFENSA" << endl;
-            cout << "Ingrese la velocidad de ataque: " << endl;
-            cin >> VoO;
 
-            cout << "Ingrese el angulo de ataque: " << endl;
-            cin >> angleO;
+            int Angle_Of = 60;
+            int Vel_Of = 20;
 
-
-            neutralizacion(disparo1, disparo2, angleO,  VoO);
+            neutralizacion(disparo1, disparo2, Angle_Of, Vel_Of);
 
         }
 
